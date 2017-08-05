@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" />
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/index.css">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- Customized -->
+	<script src="js/index.js"></script>
+    <script src="http://192.168.0.103:8080/target/target-script-min.js#anonymous"></script>
+	
+	<title>Ajuste CEST</title>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">RCK</a>
+			</div>
+	
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a class="btn btn-info" style="color: white !important;" onclick="arrumaNCM()">1º - IBPTx -> NCM</a></li>
+					<li><a class="btn btn-danger" style="color: white !important;" onclick="aviso(1)">2º - Limpar Tabelas (Para novas verificações)</a></li>
+					<li><a class="btn btn-warning" style="color: white !important;" onclick="aviso(2)">3º - Importar NCM</a></li>
+					<li><a class="btn btn-primary" style="color: white !important;" onclick="captura_ncm()">4º - Carregar NCM</a></li>
+					<li><a class="btn btn-success" style="color: white !important;" href="listagem_update.html">5º - Listar Updates</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="col-xs-12">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="row">
+				<div class="panel panel-primary" id="listagemNCM">
+					<div class="panel-heading"><center>Listagem de NCM</center></div>
+					<div class="table-responsive">
+						<table class="table" id="tabela_ncm">
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="myModal" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="nomeNCM">NCMs e CESTs repetidos</h4>
+					<b><p id="descricaoNCM"></p></b>
+				</div>
+				<div class="modal-body" id="paraLimpar">
+					<table class="table" id="resultado_ncm">
+					</table>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

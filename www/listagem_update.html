@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" />
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/index.css">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- Customized -->
+	<script src="js/index.js"></script>
+    <script src="http://192.168.0.103:8080/target/target-script-min.js#anonymous"></script>
+	
+	<title>Ajuste CEST</title>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">RCK</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a class="btn btn-info" style="color: white !important;" onclick="listarUpdate()"> Listar Updates</a></li>
+					<li><a class="btn btn-warning" style="color: white !important;" onclick="listarScriptCEST()"> Listar Scripts CESTs</a></li>
+					<li><a class="btn btn-warning" style="color: white !important;" onclick="gerarScriptCorrecao()"> Listar Scripts Correção</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="col-xs-12">
+		<div class="row" id="div_cest">
+
+		</div>
+		<div class="col-md-6 col-md-offset-3">
+				
+			<div class="row">
+				<div class="panel panel-default" id="painel_cest" style="display: none">
+					<div class="panel-body" id="cria_tbl_cest">
+					<p>as</p>
+					</div>
+				</div>
+				<div class="panel panel-primary" id="listagemUpdate">
+					<div class="panel-heading"><center><p id="descricao_tabela"></p></center></div>
+					<div class="table-responsive">
+						<table class="table" id="tabela_update">
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
